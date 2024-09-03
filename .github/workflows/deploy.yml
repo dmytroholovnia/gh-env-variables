@@ -39,3 +39,11 @@ jobs:
         run: |
           echo "MONGODB_USERNAME = ${{ env.MONGODB_USERNAME }}"
           echo "MONGODB_DB_NAME = $MONGODB_DB_NAME"
+      - name: Output default variables
+        run: |
+          echo "Workflow Name: ${{ github.workflow }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Workspace: ${{ github.workspace }}"
